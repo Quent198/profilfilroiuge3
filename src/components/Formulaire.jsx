@@ -100,7 +100,7 @@ const storage = getStorage(app);
   
     return (
       <Container style={{backgroundColor:'#449973', width:'40%'}}> 
-        <Row className='justify-content-center mb-5'>
+        <Row className='justify-content-center mb-5 mt-5'>
           <Col md={6}>
           <div>
             <h1 className='text-center'>INSCRIPTION</h1>
@@ -315,7 +315,7 @@ const storage = getStorage(app);
               feedbackTooltip
             />
           </Form.Group>
-          <Button type="submit" className='mb-5'>S'inscrire</Button>
+          <Button type="submit" className='mb-5' style={{backgroundColor:"#334C37",border:"none"}}>S'inscrire</Button>
         </Form>
       )}
     </Formik>
