@@ -99,7 +99,7 @@ const storage = getStorage(app);
   };
   
     return (
-      <Container style={{backgroundColor:'lightblue', width:'40%'}}> 
+      <Container style={{backgroundColor:'#449973', width:'40%'}}> 
         <Row className='justify-content-center mb-5'>
           <Col md={6}>
           <div>
