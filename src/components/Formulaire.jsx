@@ -255,6 +255,7 @@ const storage = getStorage(app);
             <Form.Control
               type="file"
               required
+              accept="image/*"
               name="file"
               onChange={(event) => {
                 setFieldValue("file", event.currentTarget.files[0]);
