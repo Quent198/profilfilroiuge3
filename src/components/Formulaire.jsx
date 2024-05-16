@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 import * as formik from 'formik';
 import * as yup from 'yup';
 import { useEffect, useState } from 'react';
@@ -45,15 +46,16 @@ const storage = getStorage(app);
 
 
   const schema = yup.object().shape({
-    firstName: yup.string().required(),
-    lastName: yup.string().required(),
-    username: yup.string().required(),
-    city: yup.string().required(),
-    state: yup.string().required(),
-    email: yup.string().email().required(),
-    password: yup.string().required(),
-    file: yup.mixed().required(),
-    terms: yup.bool().required().oneOf([true], 'terms must be accepted'),
+    firstName: yup.string().required("Prénom requis"),
+    lastName: yup.string().required("Nom requis"),
+    username: yup.string().required("Nom d'utilisateur requis"),
+    city: yup.string().required("Nom de la ville requis"),
+    state: yup.string().required("Nom du pays requis"),
+    email: yup.string().email().required("L'email requis"),
+    password: yup.string().required("Le mot de passe requis"),
+    confirmpassword:yup.string().required("La confirmation du mot de passe requis"),
+    file: yup.mixed().required("Veuillez mettre une image"),
+    terms: yup.bool().required().oneOf([true], 'Vous devez accepter les termes et les conditions du site'),
   });
 
   const uploadFile = (file) => {
@@ -80,7 +82,7 @@ const storage = getStorage(app);
 }
 
   const handleSubmit = async (values) => {
-    const { firstName, lastName, username, city, state, email,password, file } = values;
+    const { firstName, lastName, username, city, state, email,password,confirmpassword, file } = values;
   
     try {
       const userEmail= await createUserWithEmailAndPassword(app.auth(), email, password)
@@ -97,8 +99,11 @@ const storage = getStorage(app);
   };
   
     return (
-        <div>
-            <h1>INSCRIPTION</h1>
+      <Container>
+        <Row className='justify-content-center'>
+          <Col md={6}>
+          <div>
+            <h1 className='text-center'>INSCRIPTION</h1>
             <Formik
       validationSchema={schema}
       onSubmit={console.log}
@@ -110,6 +115,7 @@ const storage = getStorage(app);
         state: '',
         email: '',
         password:'',
+        confirmpassword:'',
         file: null,
         terms: false,
       }}
@@ -119,7 +125,7 @@ const storage = getStorage(app);
           <Row className="mb-3">
             <Form.Group
               as={Col}
-              md="4"
+              md="8"
               controlId="validationFormik101"
               className="position-relative"
             >
@@ -130,12 +136,16 @@ const storage = getStorage(app);
                 value={values.firstName}
                 onChange={handleChange}
                 isValid={touched.firstName && !errors.firstName}
+                isInvalid={!!errors.firstName}
               />
               <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid" tooltip>
+                  {errors.firstName}
+                </Form.Control.Feedback>
             </Form.Group>
             <Form.Group
               as={Col}
-              md="4"
+              md="8"
               controlId="validationFormik102"
               className="position-relative"
             >
@@ -146,11 +156,15 @@ const storage = getStorage(app);
                 value={values.lastName}
                 onChange={handleChange}
                 isValid={touched.lastName && !errors.lastName}
+                isInvalid={!!errors.lastName}
               />
 
               <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid" tooltip>
+                  {errors.lastName}
+                </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="4" controlId="validationFormikUsername2">
+            <Form.Group as={Col} md="8" controlId="validationFormikUsername2">
               <Form.Label>Nom d'utilsateur</Form.Label>
               <InputGroup hasValidation>
                 <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
@@ -172,7 +186,7 @@ const storage = getStorage(app);
           <Row className="mb-3">
             <Form.Group
               as={Col}
-              md="6"
+              md="8"
               controlId="validationFormik103"
               className="position-relative"
             >
@@ -192,7 +206,7 @@ const storage = getStorage(app);
             </Form.Group>
             <Form.Group
               as={Col}
-              md="3"
+              md="8"
               controlId="validationFormik104"
               className="position-relative"
             >
@@ -211,7 +225,7 @@ const storage = getStorage(app);
             </Form.Group>
             <Form.Group
               as={Col}
-              md="3"
+              md="8"
               controlId="validationFormik105"
               className="position-relative"
             >
@@ -231,7 +245,7 @@ const storage = getStorage(app);
             </Form.Group>
             <Form.Group
               as={Col}
-              md="3"
+              md="8"
               controlId="validationFormik105"
               className="position-relative"
             >
@@ -250,6 +264,26 @@ const storage = getStorage(app);
               </Form.Control.Feedback>
             </Form.Group>
           </Row>
+          <Form.Group
+              as={Col}
+              md="8"
+              controlId="validationFormik105"
+              className="position-relative"
+            >
+              <Form.Label>Confirmer le mot de passe</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Confirmer le mot de passe"
+                name="confirmpassword"
+                value={values.confirmpassword}
+                onChange={handleChange}
+                isInvalid={!!errors.confirmpassword}
+              />
+
+              <Form.Control.Feedback type="invalid" tooltip>
+                {errors.confirmpassword}
+              </Form.Control.Feedback>
+            </Form.Group>
           <Form.Group className="position-relative mb-3">
             <Form.Label>Fichier</Form.Label>
             <Form.Control
@@ -272,7 +306,7 @@ const storage = getStorage(app);
             <Form.Check
               required
               name="terms"
-              label="Agree to terms and conditions"
+              label="Accepter les termes et les conditions"
               onChange={handleChange}
               isInvalid={!!errors.terms}
               feedback={errors.terms}
@@ -281,10 +315,15 @@ const storage = getStorage(app);
               feedbackTooltip
             />
           </Form.Group>
-          <Button type="submit">Submit form</Button>
+          <Button type="submit">S'inscrire</Button>
         </Form>
       )}
     </Formik>
         </div>
+          </Col>
+
+        </Row>
+      </Container>
+        
     )
 }

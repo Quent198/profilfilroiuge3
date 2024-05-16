@@ -2,6 +2,7 @@ import { faCircleArrowDown,faUser, faBars, faTimes} from '@fortawesome/free-soli
 import styles from "./Header.module.scss"
 import { useState } from 'react'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Logo from '../../public/Logo.png'
 
 
 export default function Header() {
@@ -14,7 +15,9 @@ export default function Header() {
     return(
         <div className={styles["Header"]}>
         <div className={styles["Logo"]}>
-          <div className={styles["LogoTitle"]}>Logo</div>
+          <div className={styles["LogoTitle"]}>
+            <img src={Logo} />
+          </div>
         </div>
 
         <div className={`${styles["MobileMenu"]} ${styles["MenuMobile"]}`} onClick={toggleMobileMenu}>
