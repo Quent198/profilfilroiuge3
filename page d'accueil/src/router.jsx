@@ -4,7 +4,8 @@ import App from "./App";
 import Homepage from "./pages/homepage/Homepage";
 import ErrorPage from "./pages/ErrorPage";
 import Login from "./components/auth/Login";
-import CookiePolicy from "./components/CookiePolicy"; 
+import CookiePolicy from "./components/CookiePolicy";
+import LegalNotice from "./components/LegalNotice"; 
 
 export const router = createBrowserRouter([
   {
@@ -21,9 +22,13 @@ export const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/cookie-policy",  // Ajouter la route de politique de cookies
+        path: "/cookie-policy",  
         element: <CookiePolicy />,
       },
+      {
+        path:"/legalnotice",
+        element:<LegalNotice />
+      }
     ],
   },
 ]);
