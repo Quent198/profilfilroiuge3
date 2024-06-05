@@ -2,90 +2,65 @@ import actu1 from "../../assets/Reviews/actu1.jpg";
 import actu2 from "../../assets/Reviews/actu2.webp";
 import actu3 from "../../assets/Reviews/actu3.webp";
 import actu4 from "../../assets/Reviews/actu4.jpg";
-import actu5 from "../../assets/Reviews/actu5.webp";
-import actu6 from "../../assets/Reviews/actu6.webp";
+
 
 import user1 from "../../assets/Reviews/user1.jpg";
 import user2 from "../../assets/Reviews/user2.jpg";
 import user3 from "../../assets/Reviews/user3.webp";
 import user4 from "../../assets/Reviews/user4.jpg";
-import user5 from "../../assets/Reviews/user5.png";
-import user6 from "../../assets/Reviews/user6.webp";
+
 
 export default function LastNews() {
   const Articles = [
     {
       imgUrl: actu1,
-      category: "Côté obscur",
+      category: "Insolite",
       date: "25 mai 2024",
-      title: "L'Ordre 66",
+      title: "Le Palais Idéal du Facteur Cheval",
       description:
-        "Pour prouver à son maître sa totale loyauté en sa nouvelle allégeance, il partit au Temple Jedi pour tuer tous les Jedi et apprentis présents.",
+        "Dans la Drôme, ce monument unique a été construit par un facteur passionné d'architecture. Il mêle influences orientales, médiévales et antiques, créant un chef-d'œuvre d'art naïf​",
       user: {
         avatarUrl: user1,
-        username: "Dark Vador",
+        username: "FacteurPassionné26",
       },
     },
     {
       imgUrl: actu2,
-      category: "Naboo",
+      category: "Historique",
       date: "25 mai 2024",
-      title: "Invasion de Naboo",
+      title: "Le Château de Trévarez",
       description:
-        "Cependant, quand Sidious apprit l'identité des médiateurs, il ordonna aux Neimoidiens de commencer l'invasion de Naboo sans tarder et de se débarrasser des deux Jedi. ",
+        "Le château de Trévarez a été édifié entre 1893 et 1907 par James de Kerjégu, un homme politique breton. Le bâtiment se distingue par son mélange de styles néogothique et néo-Renaissance, reflétant les goûts éclectiques de l'époque. ",
       user: {
         avatarUrl: user2,
-        username: "Dark Sidious",
+        username: "Bretonne29",
       },
     },
     {
       imgUrl: actu3,
-      category: "Naboo",
+      category: "Géographique",
       date: "25 mai 2024",
-      title: "Crise de Naboo",
+      title: "Le Lac des Corbeaux",
       description:
-        "Ainsi, alors que la Bataille de Naboo venait de commencer, Dark Maul révéla son funeste et démoniaque visage à Qui-Gon Jinn et Obi-Wan Kenobi.",
+        "D'origine glaciaire, ce lac est niché au cœur de la forêt vosgienne, près de la station de La Bresse. Son environnement sauvage et sa tranquillité rappellent les paysages canadiens, offrant une immersion totale dans la nature",
       user: {
         avatarUrl: user3,
-        username: "Dark Maul",
+        username: "LeCanadienLorrain",
       },
     },
     {
       imgUrl: actu4,
-      category: "Naboo",
+      category: "Culturelle",
       date: "25 mai 2024",
-      title: "Bataille de Naboo",
+      title: "Cité Internationale de la langue française au Château de Villers-Cotterêts",
       description:
-        "Après la bataille de Naboo, Jar Jar Binks fut porté par un élan populaire jusqu'au poste de Représentant Sénatorial associé au Sénat Galactique.",
+        "Situé dans les Hauts-de-France, ce château, classé Monument Historique, a rouvert ses portes en octobre 2023 après une longue période d'abandon et de restauration. Il accueille désormais la Cité Internationale de la langue française, un centre dédié à la diffusion des cultures francophones. Avec ses 1600 m² d'expositions, des ateliers d'artistes et un laboratoire d'innovation, ce site propose une immersion dans l'histoire et l'évolution de la langue française",
       user: {
         avatarUrl: user4,
-        username: "Jarjar Binks",
+        username: "Picard02",
       },
     },
-    {
-      imgUrl: actu5,
-      category: "Naboo",
-      date: "25 mai 2024",
-      title: "Échec des négociations",
-      description:
-        "Qui-Gon Jinn et son padawan Obi-Wan furent envoyés sur Naboo par le Chancelier Finis Valorum en tant que médiateurs afin de résoudre cette crise par des voies diplomatiques.",
-      user: {
-        avatarUrl: user5,
-        username: "Qui-Gon Jinn",
-      },
-    },
-    {
-      imgUrl: actu6,
-      category: "Sith",
-      date: "25 mai 2024",
-      title: "Seigneur Noir des Sith",
-      description:
-        "Durant sa vie, Plagueis tenta de percer le secret de l'immortalité à de nombreuses reprises notamment en tentant de créer une dyade de Force avec son apprenti, Dark Sidious.",
-      user: {
-        avatarUrl: user6,
-        username: "Dark Pleguis",
-      },
-    },
+   
   ];
 
   return (

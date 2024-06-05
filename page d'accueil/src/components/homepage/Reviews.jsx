@@ -3,39 +3,39 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 
 import user1 from "../../assets/Reviews/user4.jpg";
 import user2 from "../../assets/Reviews/user1.jpg";
-import user3 from "../../assets/Reviews/user7.webp";
+import user3 from "../../assets/Reviews/user2.jpg";
 
 export default function Reviews() {
   const reviews = [
     {
-      text: "Missa JarJar Binks",
+      text: "Ce lieu est resplendissant et ludique",
       user: {
-        username: "Jarjar Binks",
+        username: "Picard02",
         avatarUrl: user1,
-        role: "Gungan",
+        role: "Professeur de français",
       },
     },
     {
-      text: "Est-ce que tu connais l’histoire tragique de Dark Plagueis le Sage ?",
+      text: "Château magnifique et je le conseille pour les amoureux de la Bretagne",
       user: {
-        username: "Sheev Palpatine",
+        username: "Bretonne29",
         avatarUrl: user3,
-        role: "Chancelier Suprême",
+        role: "Ostréicultrice",
       },
     },
     {
-      text: "Je suis ton père.",
+      text: "Lieu original que je conseille pours les fans de lieux insolites",
       user: {
-        username: "Dark Vador",
+        username: "FacteurPassionné26",
         avatarUrl: user2,
-        role: "Seigneur Sith",
+        role: "Facteur",
       },
     },
   ];
   return (
     <div className="flex flex-col p-20 bg-white items-center justify-center">
       <h1 className="self-start text-primary text-3xl font-bold">
-        Lorem ipsum dolor sit amet consectetur. Euismod morbi faucibus ante nis.
+        Avis
       </h1>
       <div className="flex flex-row flex-wrap items-center justify-center">
         {reviews.map((review) => {

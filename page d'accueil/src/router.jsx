@@ -4,6 +4,7 @@ import App from "./App";
 import Homepage from "./pages/homepage/Homepage";
 import ErrorPage from "./pages/ErrorPage";
 import Login from "./components/auth/Login";
+import CookiePolicy from "./components/CookiePolicy"; 
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/cookie-policy",  // Ajouter la route de politique de cookies
+        element: <CookiePolicy />,
       },
     ],
   },
