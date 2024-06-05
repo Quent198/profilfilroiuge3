@@ -22,7 +22,7 @@ export default function Header() {
         <img
           src={Logo}
           alt="Logo"
-          className="w-auto h-[75px] hover:cursor-pointer"
+          className="w-auto h-[70px] hover:cursor-pointer"
         />
       </Link>
       <nav>

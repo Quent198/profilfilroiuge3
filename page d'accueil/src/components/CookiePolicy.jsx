@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-
 const CookiePolicy = () => {
   return (
     <div>
@@ -49,7 +48,8 @@ const CookiePolicy = () => {
           certains services et fonctionnalités peuvent ne pas fonctionner.
         </p>
       </div>
-      <Footer/>
+      <div style={{ marginBottom: "50px" }}></div>
+      <Footer />
     </div>
   );
 };
@@ -60,6 +60,9 @@ const styles = {
     margin: "0 auto",
     padding: "20px",
     fontFamily: "Arial, sans-serif",
+    backgroundColor: "#f7f7f7",
+    borderRadius: "8px",
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
   },
   title: {
     fontSize: "24px",
@@ -85,4 +88,5 @@ const styles = {
 };
 
 export default CookiePolicy;
+
 

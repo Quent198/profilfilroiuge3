@@ -5,72 +5,38 @@ import Footer from "./Footer";
 const LegalNotice = () => {
   return (
     <div>
-        <Header/>
-        <div style={styles.container}>
-
-        
-      <h1 style={styles.title}>Mentions Légales</h1>
-
-      <div style={styles.section}>
-        <h2>Article 1 - Informations légales</h2>
-        <p>Raison sociale : [Nom de votre entreprise]</p>
-        <p>Forme juridique : [Forme juridique de votre entreprise]</p>
-        <p>Adresse : [Adresse de votre entreprise]</p>
-        <p>Téléphone : [Numéro de téléphone]</p>
-        <p>Email : [Adresse email]</p>
-        <p>Directeur de la publication : [Nom du directeur]</p>
-      </div>
-
-      <div style={styles.section}>
-        <h2>Article 2 - Hébergement</h2>
-        <p>L'hébergement du site est assuré par : [Nom de l'hébergeur]</p>
-        <p>Adresse : [Adresse de l'hébergeur]</p>
-        <p>Téléphone : [Numéro de téléphone de l'hébergeur]</p>
-      </div>
-
-      <div style={styles.section}>
-        <h2>Article 3 - Propriété intellectuelle</h2>
-        <p>
-          Tous les contenus présents sur le site sont protégés par les droits
-          de propriété intellectuelle. Toute reproduction ou représentation,
-          totale ou partielle, sans l'autorisation préalable de [Nom de votre
-          entreprise] est strictement interdite.
+      <Header />
+      <div style={styles.container}>
+        <h1 style={styles.title}>Mentions Légales</h1>
+        <p style={styles.text}>
+          Les présentes mentions légales s'appliquent à toute personne
+          visitant ou utilisant le site Web.
+        </p>
+        <h2 style={styles.subtitle}>Editeur du site</h2>
+        <p style={styles.text}>
+          Votre Nom ou Raison Sociale<br />
+          Adresse : Votre adresse<br />
+          Téléphone : Votre numéro de téléphone<br />
+          Email : Votre adresse email<br />
+          SIRET : Votre numéro de SIRET<br />
+          Directeur de la publication : Nom du directeur de la publication<br />
+          Hébergeur : Nom de l'hébergeur<br />
+          Adresse : Adresse de l'hébergeur<br />
+          Téléphone : Numéro de téléphone de l'hébergeur<br />
+        </p>
+        <h2 style={styles.subtitle}>Propriété intellectuelle</h2>
+        <p style={styles.text}>
+          Le contenu de ce site Web est protégé par les lois sur la propriété
+          intellectuelle et est la propriété de l'éditeur du site ou de ses
+          fournisseurs de contenu. Toute utilisation non autorisée du contenu
+          du site Web peut violer les lois sur la propriété intellectuelle,
+          les lois sur la confidentialité et les règlements et statuts
+          applicables.
         </p>
       </div>
-
-      <div style={styles.section}>
-        <h2>Article 4 - Collecte de données personnelles</h2>
-        <p>
-          Le site peut collecter des données personnelles via des formulaires
-          de contact ou d'inscription. Ces données sont utilisées uniquement
-          dans le cadre prévu par la loi et ne seront en aucun cas cédées à des
-          tiers.
-        </p>
-      </div>
-
-      <div style={styles.section}>
-        <h2>Article 5 - Cookies</h2>
-        <p>
-          Le site utilise des cookies pour améliorer l'expérience utilisateur.
-          En continuant à naviguer sur ce site, vous acceptez l'utilisation de
-          ces cookies.
-        </p>
-      </div>
-
-      <div style={styles.section}>
-        <h2>Article 6 - Limitation de responsabilité</h2>
-        <p>
-          [Nom de votre entreprise] ne saurait être tenu responsable des
-          dommages directs ou indirects résultant de l'utilisation de ce site
-          ou de l'impossibilité d'y accéder.
-        </p>
-      </div>
-
-      
+      <div style={{ marginBottom: "50px" }}></div>
+      <Footer />
     </div>
-    <Footer/>
-    </div>
-    
   );
 };
 
@@ -79,25 +45,29 @@ const styles = {
     maxWidth: "800px",
     margin: "0 auto",
     padding: "20px",
+    fontFamily: "Arial, sans-serif",
+    backgroundColor: "#f7f7f7",
+    borderRadius: "8px",
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
   },
   title: {
-    textAlign: "center",
-    marginBottom: "30px",
+    fontSize: "24px",
+    fontWeight: "bold",
+    color: "#333",
+    marginBottom: "20px",
   },
-  section: {
-    marginBottom: "40px",
+  subtitle: {
+    fontSize: "20px",
+    fontWeight: "bold",
+    color: "#333",
+    marginTop: "30px",
+    marginBottom: "10px",
   },
-  footer: {
-    marginTop: "50px",
-    borderTop: "1px solid #ccc",
-    paddingTop: "20px",
-    textAlign: "center",
-  },
-  footerText: {
-    fontSize: "14px",
+  text: {
+    fontSize: "16px",
+    lineHeight: "1.5",
     color: "#666",
   },
 };
 
 export default LegalNotice;
-
