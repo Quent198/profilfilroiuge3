@@ -1,4 +1,5 @@
 import Header from "../../components/Header";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -58,6 +59,13 @@ export default function Login() {
           >
             <p className="mx-1">Se connecter</p>
           </button>
+          <p className="text-sm mt-3">
+            Vous n'avez pas de compte ?{" "}
+            <Link to="/register" className="text-secondary">
+              S'inscrire
+            </Link>
+          </p>
+
           <p className="text-sm hover:cursor-pointer hover:text-secondary">
             Mot de passe oublié
           </p>

@@ -6,6 +6,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Login from "./components/auth/Login";
 import CookiePolicy from "./components/CookiePolicy";
 import LegalNotice from "./components/LegalNotice"; 
+import Register from "./components/auth/Register";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path:"/register",
+        element:<Register/>,
       },
       {
         path: "/cookie-policy",  
