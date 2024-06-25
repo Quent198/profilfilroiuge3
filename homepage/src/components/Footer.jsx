@@ -5,7 +5,7 @@ export default function Footer() {
         <h6 className="footer-title text-2xl text-primary opacity-100">
           Souscrire à notre newsletters
         </h6>
-        <fieldset className="form-control w-80">
+        <fieldset className="form-control w-75">
           <div className="join">
             <input
               type="text"
@@ -13,7 +13,7 @@ export default function Footer() {
               className="input input-bordered join-item"
             />
             <button
-              className="btn btn-primary join-item bg-primary border-secondary hover:bg-secondary hover:border-primary"
+              className="btn btn-primary join-item bg-primary border-secondary hover:bg-secondary hover:border-primary w-25"
               onClick={(e) => {
                 e.preventDefault();
               }}
