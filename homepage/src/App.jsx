@@ -1,9 +1,9 @@
 import "./App.css";
-
-import { Outlet } from "react-router-dom";
-import CookieBanner from "./components/CookieBanner"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Outlet } from "react-router-dom";
+import CookieBanner from "./components/CookieBanner"; 
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SliderContainer from "./components/homepage/SliderContainer";

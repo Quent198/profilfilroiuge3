@@ -14,6 +14,8 @@ import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/
 import Header from '../Header';
 import Footer from '../Footer';
 
+
+
 export default function Register() {
   // Import the functions you need from the SDKs you need
 
